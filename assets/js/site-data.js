@@ -322,7 +322,7 @@ window.SITE_DATA = {
 
   service: {
     title: { en: 'Academic Service', zh: '学术服务' },
-    intro: { en: '【Add your reviewing, editorial, program committee, and academic community service.】', zh: '【填写审稿、编委、程序委员会及学术共同体服务经历。】' },
+    intro: { en: '', zh: '' },
     groups: [
       {
         title: { en: 'Conference PC Member', zh: '会议程序委员会委员' },
