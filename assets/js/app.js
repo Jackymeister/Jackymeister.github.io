@@ -120,8 +120,11 @@
     var profile = data.profile;
     document.getElementById('brand-mark').textContent = profile.initials;
     setText(document.getElementById('brand-name'), profile.name);
-    setText(document.getElementById('profile-name-zh'), profile.name.zh);
-    setText(document.getElementById('profile-name-en'), profile.name.en);
+    var primaryName = document.getElementById('profile-name-zh');
+    var secondaryName = document.getElementById('profile-name-en');
+    setText(primaryName, ENGLISH_ONLY ? profile.name.en : profile.name.zh);
+    setText(secondaryName, profile.name.en);
+    secondaryName.hidden = ENGLISH_ONLY;
     setText(document.getElementById('hero-location'), profile.location);
     setText(document.getElementById('hero-role'), {
       en: profile.role.en + ' · ' + profile.university.en,

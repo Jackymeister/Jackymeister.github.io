@@ -7,20 +7,20 @@
 window.SITE_DATA = {
   meta: {
     title: {
-      en: '甘洋镭',
-      zh: 'Yanglei Gan'
+      en: 'yangleigan',
+      zh: '甘洋镭'
     },
     description: {
       en: 'Academic homepage of Yanglei Gan, a faculty member in computer science.',
-      zh: '你的姓名，计算机学院教师个人学术主页。'
+      zh: '西南民族大学计算机与人工智能学院教师甘洋镭的个人学术主页。'
     }
   },
 
   profile: {
     initials: 'YG',
     name: {
-      en: '甘洋镭',
-      zh: 'Yanglei Gan'
+      en: 'yangleigan',
+      zh: '甘洋镭'
     },
     role: {
       en: 'School of Computer Science and Artifical Intelligence',
@@ -478,6 +478,6 @@ window.SITE_DATA = {
   },
 
   footer: {
-    note: { en: '© 2026 Your Name · Built with GitHub Pages', zh: '© 2026 你的姓名 · 使用 GitHub Pages 构建' }
+    note: { en: '© 2026 yangleigan · Built with GitHub Pages', zh: '© 2026 甘洋镭 · 使用 GitHub Pages 构建' }
   }
 };
