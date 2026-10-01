@@ -90,6 +90,8 @@ main { padding-top: 62px; }
 .section-heading { display: block; margin-bottom: 1.25rem; }
 .section-heading > p { max-width: none; margin: 0; color: var(--muted); font-size: .93rem; }
 .section-heading.inline-heading { padding: 0; border: 0; }
+.service-section .section-heading.without-intro { margin-bottom: .25rem; }
+.service-section .section-heading.without-intro h2 { margin-bottom: 0; }
 .about-section { padding-top: .5rem; border-top: 0; }
 .about-copy h2 { max-width: none; font-size: 1.7rem; font-weight: 400; }
 .prose-columns { display: block; max-width: none; margin-top: 1.3rem; }

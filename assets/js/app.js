@@ -120,11 +120,11 @@
     var profile = data.profile;
     document.getElementById('brand-mark').textContent = profile.initials;
     setText(document.getElementById('brand-name'), profile.name);
-    var primaryName = document.getElementById('profile-name-zh');
-    var secondaryName = document.getElementById('profile-name-en');
+    var primaryName = document.getElementById('profile-name-primary');
+    var secondaryName = document.getElementById('profile-name-secondary');
     setText(primaryName, ENGLISH_ONLY ? profile.name.en : profile.name.zh);
-    setText(secondaryName, profile.name.en);
-    secondaryName.hidden = ENGLISH_ONLY;
+    setText(secondaryName, ENGLISH_ONLY ? profile.name.zh : profile.name.en);
+    secondaryName.hidden = false;
     setText(document.getElementById('hero-location'), profile.location);
     setText(document.getElementById('hero-role'), {
       en: profile.role.en + ' · ' + profile.university.en,
@@ -311,7 +311,11 @@
 
   function renderService() {
     setText(document.getElementById('service-title'), data.service.title);
-    setText(document.getElementById('service-intro'), data.service.intro);
+    var intro = document.getElementById('service-intro');
+    setText(intro, data.service.intro);
+    var heading = document.querySelector('.service-section .section-heading');
+    intro.hidden = !intro.textContent.trim();
+    heading.classList.toggle('without-intro', intro.hidden);
     var groups = document.getElementById('service-groups');
     groups.replaceChildren();
     (data.service.groups || []).forEach(function (group) {
