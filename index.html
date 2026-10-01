@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071b33">
+    <meta name="description" content="Academic homepage template for a university computer science faculty member.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Your Name · Computer Science">
+    <meta property="og:description" content="Academic homepage template.">
+    <meta property="og:image" content="assets/images/avatar-placeholder.svg">
+    <title>Your Name · Computer Science</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('faculty-homepage-theme');
+          var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.dataset.theme = saved || preferred;
+        } catch (error) {}
+      }());
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#home" aria-label="Homepage">
+        <span class="brand-mark" id="brand-mark" aria-hidden="true">YN</span>
+        <span id="brand-name">Your Name</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation"></nav>
+      <div class="header-actions">
+        <button class="text-button lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">中文</button>
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme"><span aria-hidden="true">◐</span></button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-name">
+        <div class="hero-grid">
+          <div class="portrait-wrap reveal">
+            <div class="portrait-frame">
+              <img id="profile-image" src="assets/images/avatar-placeholder.svg" alt="Portrait placeholder" width="640" height="800">
+            </div>
+            <div class="portrait-caption"><span class="caption-line"></span><span id="hero-location">Your City · China</span></div>
+            <div class="profile-links" id="profile-links" aria-label="Academic profiles"></div>
+          </div>
+
+          <div class="hero-copy reveal">
+            <p class="eyebrow" id="hero-role">Professor · School of Computer Science</p>
+            <h1 id="hero-name"><span id="profile-name-zh">你的姓名</span><small id="profile-name-en">Your Name</small></h1>
+            <p class="hero-headline" id="hero-headline"></p>
+            <p class="hero-summary" id="hero-summary"></p>
+          </div>
+
+          <aside class="hero-index reveal" id="hero-index" aria-label="Research profile summary"></aside>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-label"><span>01</span><p data-en="About" data-zh="个人简介">About</p></div>
+        <div class="about-copy reveal">
+          <h2 id="about-title"></h2>
+          <div class="prose-columns" id="about-copy"></div>
+        </div>
+      </section>
+
+      <!-- Keep the news timeline before Publications. Add new items in site-data.js. -->
+      <section class="section news-section" id="news">
+        <div class="section-label"><span>02</span><p data-en="Current News" data-zh="Current News">Current News</p></div>
+        <div class="section-content">
+          <div class="section-heading inline-heading reveal">
+            <h2 id="news-title"></h2>
+            <p id="news-intro"></p>
+          </div>
+          <div class="news-scrollbox">
+            <ul class="news-list current-news-list" id="news-list" dir="ltr"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section publication-section" id="publications">
+        <div class="section-label"><span>03</span><p data-en="Publications" data-zh="论文成果">Publications</p></div>
+        <div class="section-content">
+          <div class="section-heading inline-heading reveal">
+            <h2 id="publications-title"></h2>
+            <p id="publications-intro"></p>
+          </div>
+          <ol class="publication-list" id="publication-list"></ol>
+          <div class="section-link-row"><a class="text-link" id="all-publications-link" href="#" target="_blank" rel="noopener noreferrer"></a></div>
+        </div>
+      </section>
+
+      <section class="section research-section" id="research">
+        <div class="section-label"><span>04</span><p data-en="Research" data-zh="研究方向">Research</p></div>
+        <div class="section-content">
+          <div class="section-heading reveal">
+            <h2 id="research-title"></h2>
+            <p id="research-intro"></p>
+          </div>
+          <div class="research-grid" id="research-grid"></div>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-label"><span>05</span><p data-en="Projects" data-zh="项目与开源">Projects</p></div>
+        <div class="section-content">
+          <div class="section-heading inline-heading reveal">
+            <h2 id="projects-title"></h2>
+            <p id="projects-intro"></p>
+          </div>
+          <div class="project-grid" id="project-grid"></div>
+        </div>
+      </section>
+
+      <section class="section teaching-section" id="teaching">
+        <div class="section-label"><span>06</span><p data-en="Teaching" data-zh="教学">Teaching</p></div>
+        <div class="section-content">
+          <div class="section-heading inline-heading reveal"><h2 id="teaching-title"></h2><p id="teaching-intro"></p></div>
+          <div class="timeline" id="teaching-list"></div>
+        </div>
+      </section>
+
+      <section class="section service-section" id="service">
+        <div class="section-label"><span>07</span><p data-en="Service" data-zh="学术服务">Service</p></div>
+        <div class="section-content">
+          <div class="section-heading inline-heading reveal"><h2 id="service-title"></h2><p id="service-intro"></p></div>
+          <div class="service-groups" id="service-groups"></div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-inner reveal">
+          <p class="eyebrow" data-en="Contact" data-zh="联系">Contact</p>
+          <h2 id="contact-title"></h2>
+          <a id="contact-email" href="mailto:your.email@university.edu"></a>
+          <p id="contact-note"></p>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="footer-name">Your Name</span>
+      <span id="footer-note">© 2026 Your Name · Built with GitHub Pages</span>
+    </footer>
+
+    <noscript>
+      <div class="noscript-note">This homepage uses a small amount of JavaScript to switch languages and themes. Please enable JavaScript to view the full content.</div>
+    </noscript>
+    <script src="assets/js/site-data.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
