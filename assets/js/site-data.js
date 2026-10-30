@@ -327,6 +327,7 @@ window.SITE_DATA = {
       {
         title: { en: 'Conference PC Member', zh: '会议程序委员会委员' },
         items: [
+          { name: { en: 'ACL Rolling Review Area Chair'}, href: '', period: { en: '2026-present'} },
           { name: { en: 'ACM SIGKDD Conference on Knowledge Discovery and Data Mining'}, href: '', period: { en: '2024-present'} },
           { name: { en: 'International Conference on Learning Representations'}, href: '', period: { en: '2025–present'} },
           { name: { en: 'ACM SIGIR Conference on Research and Development in Information Retrieval'}, href: '', period: { en: '2025–present'} },
